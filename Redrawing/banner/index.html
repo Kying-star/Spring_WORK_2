@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banner</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #banner{
+            width: 590px;
+            height: 470px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        
+        .img-tab{
+            position: absolute;
+            width: 3000px;
+            height: 470px;
+
+        }
+        .img-tab:hover{
+            width: -590px;
+        }
+        img{
+            width: 590px;
+            height: 470px;
+        }
+        .item{
+           float: left;
+        }
+        .btn-list{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -30px;
+            border-radius: 5px;
+            width: 60px;
+            height: 10px;
+            background-color: blanchedalmond;
+        }
+        .btn{
+            width: 12px;
+            height: 12px;
+            background-color: bisque;
+            float: left;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <div class="img-tab">
+            <div class="item"><img src="images/1.jpg" alt=""></div>
+            <div class="item"><img src="images/2.jpg" alt=""></div>
+            <div class="item"><img src="images/3.jpg" alt=""></div>
+            <div class="item"><img src="images/4.jpg" alt=""></div>
+            <div class="item"><img src="images/5.jpg" alt=""></div>
+            <div class="item"><img src="images/1.jpg" alt=""></div>
+        </div>
+        <div class="btn-list">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </div>
+    </div>
+    <script>
+        var leftpostion = document.querySelector('.img-tab');
+
+        
+
+
+        // var leftpos = -590
+        // var banner = ()=>{
+        //     let tmp = leftpos;
+        //     leftpos-=590;
+        //     console.log(leftpos);
+        //     if(leftpos<=-590*5) {leftpos = 0;}
+            
+        //     let i = 0
+        //     let cartoon = setInterval(() => {
+        //         leftpostion.style.left = tmp+(i) + 'px'
+        //         i-=2.95
+        //         if(i<=-590) clearTimeout(cartoon)
+        //     }, 10);
+            
+            
+        //         leftpostion.style.left = leftpos + 'px'
+            
+            
+        // }
+        
+
+
+
+        // setInterval(() => {
+        //     banner();
+        // }, 2000)
+        
+        
+        
+    </script>
+</body>
+</html>

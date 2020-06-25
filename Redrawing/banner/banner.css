@@ -1,0 +1,68 @@
+    /* 轮播图容器 */
+    #carousel{
+        width: 800px;
+        height: 400px;
+        border: 2px solid brown;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        overflow: hidden;
+    }
+    /* 轮播图图片内容 */
+    #list{
+        height: 400px;
+        width: 9999px;
+        position: relative;
+    }
+    #list > img{
+        width:800px;
+        height: 100%;
+        display: block;
+        float: left;
+    }
+
+    /* 轮播图导航按钮 */
+    #slider_nav{
+       width: 100%;
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    #slider_nav > span {
+        width: 40px;
+        height: 4px;
+        display: block;
+        margin: 0 4px 0 4px;
+        float: left;
+        background-color: rgba(0,0,0,0.4);
+        cursor: pointer;
+    }
+   /* 导航按钮活动样式*/
+    #slider_nav .active{
+        background-color: orangered;
+    }
+
+    /* 下一张、上一张按钮 */
+    #prev,#next{
+        width: 40px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }    
+    #prev{
+        left: 20px;
+        background-image: url(./iconImg/next.png);
+        background-size: 40px   
+    }
+    #next{
+        right: 20px;
+        background-image: url(./iconImg/prev.png);
+        background-size: 40px   
+    }
+
+    

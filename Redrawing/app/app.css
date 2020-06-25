@@ -1,0 +1,512 @@
+.parent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 6vh 405px 42vh 200vh 31vh/10vw 1fr 1fr 10vw;
+    grid-template-areas: "head head head head"
+                         "banner banner banner banner"
+                         "mainbody0 mainbody0 mainbody0 mainbody0"
+                         "mainbody1 mainbody1 mainbody1 mainbody1"
+                         "footer footer footer footer ";
+    justify-items: center;
+}
+
+.header_div{
+    cursor: pointer;
+}
+
+.header{
+    width: 804px;
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.header div{
+    width: 5vw;
+    text-align: center;
+}
+
+.header span{
+    width: 2vw;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+   height: 6vh;
+   margin-right: 6vw;
+}
+.banner_bk{
+    width: 100%;
+    background-color: #011427;
+    grid-area: banner;
+    display: flex;
+    justify-content: center;
+}
+    /* 轮播图容器 */
+    .banner{
+        width: 800px;
+        height: 400px;
+        
+        border: 2px solid brown;
+        justify-self:center;
+        overflow: hidden;
+    }
+    /* 轮播图图片内容 */
+    #list{
+        height: 400px;
+        width: 9999px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    #list > img{
+        width:800px;
+        height: 100%;
+        display: block;
+        
+    }
+
+    /* 轮播图导航按钮 */
+    #slider_nav{
+        top: 50vh;
+       width: 804px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #slider_nav > span {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        display: block;
+        margin: 0 4px 0 4px;
+        background-color: rgba(0,0,0,0.4);
+        cursor: pointer;
+    }
+   /* 导航按钮活动样式*/
+    #slider_nav .active{
+        background-color: orangered;
+    }
+
+    /* 下一张、上一张按钮 */
+    #prev,#next{
+        width: 40px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+        top: 30vh;
+        position: absolute;
+    }    
+
+    #prev{
+        left: 24vw;
+        background-image: url(img/arrowhead.png);
+        transform: rotateY(180deg);   /* 水平镜像翻转 */
+        background-size: 40px   
+        
+    }
+    #next{
+        right: 24vw;
+        background-image: url(img/arrowhead.png);
+        background-size: 40px   
+    }
+    
+.mainbody0{
+    height: 40vh;
+    width: 100%;
+    grid-area: mainbody0;
+    background-color: #d9251e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.m1_d>h4{
+    letter-spacing: 4px;
+    margin-bottom: 1vh;
+}
+
+
+li{
+    list-style: none;
+}
+
+.m1_d{
+    height: 35vh;
+    width: 15.3vw;
+    background-color: #d9251e;
+    color:#fff;
+
+}
+
+.m1_d>*{
+    margin-left: 2vw;
+}
+
+.m1_d li{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.m1_d li div{
+    width: 10px;
+    height: 10px;
+    border: 0px;
+    float: left;
+    vertical-align: top;
+    margin-right: 1vw;
+    background-image: url(img/star.png);
+    background-size:cover
+}
+.m1_d:nth-child(3){
+    height: 35vh;
+    padding-bottom: 5vh;
+    background-color: #c90001;
+}
+
+.m1_d>li>button{
+    width: 74px;
+    height: 25px;
+    background-color: rgba(2, 2, 2, 0);
+    border: 0.5px solid #ffffff;
+    color: #fff;
+    margin-top: 2vh;
+   
+}
+.m1_d:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.m1_d:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.m1_d:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.m1_d:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.m1_d>div{
+    width: 73px;
+    height: 73px;
+    background-image: url(img/css_sprites.jpg);
+    
+}
+
+.sprites_img1{
+    height: 73px;
+    width: 70px;
+    border: 0px;
+    background-position: -10px -10px;
+    transform: scale(0.6);
+}
+
+.sprites_img2{
+    width: 73px; height: 70px;
+    border: 0px;
+    background-position: -103px -10px;
+    transform: scale(0.6);
+}
+
+.sprites_img3{
+    width: 62px; height: 71px;
+    border: 0px;
+    background-position: -10px -101px;
+    transform: scale(0.6);
+}
+
+.sprites_img4{
+    width: 57px; height: 73px;
+    border: 0px;
+    background-position: -196px -10px;
+    transform: scale(0.6);
+}
+/*mainbody1*/
+
+.mainbody1{
+    height: 100vh;
+    width: 100%;
+    grid-area: mainbody1;
+}
+
+
+.lines{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.line{
+    width: 10vw;
+    height: 2px;
+    background-color: red;
+
+}
+
+#font{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 1vw;
+}
+
+.W_list{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.w{
+    width: 11.2vw;
+    height: 40vh;
+    box-shadow: 1px 0px 1px -1px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.W_list h3{
+    color: #d9251e;
+}
+
+.W>*{
+    margin-left: 1vw;
+}
+
+.W_list li{
+    font-size: 11px;
+    font-weight: 200;
+}
+
+.W_list_div{
+    width: 18px;
+    height: 2px;
+    margin-top: 1vh;
+    background-color: #ba0a0c;
+}
+.img_w{
+    width: 11vw;
+    height:24vh;
+    background-image: url(img/w.jpg);
+    background-size: cover;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+/*message*/
+
+.message{
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.message_list{
+    width: 30.5vw;
+    height: 40vh;
+    margin-left: 2vw;
+
+}
+
+.message_header{
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.message_header span:nth-child(1){
+    height: 30px;
+    width: 35px;
+    background-color: crimson;
+}
+.out_div{
+    height: 28px;
+    width: 380px;
+    border-bottom:  2px solid #d9251e;
+    margin-left: 3px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+.out_div h4{
+    text-align: center;
+    margin-left: 10px;
+    height: 36px;
+}
+
+.out_div a{
+    position: relative;
+    left: 60%;
+    text-decoration: none;
+    color: black;
+}
+
+.in_span{
+     height:0px;
+     border: 1px solid #d9251e;
+     width: 34px;
+    position: relative;
+
+     transform:rotate(125deg);
+     -o-transform:rotate(125deg);
+     -moz-transform:rotate(125deg);
+     -webkit-transform:rotate(125deg);
+}
+
+.message li{
+    
+    height: 28px;
+    width: 370px;
+    border-bottom: 1px dashed black;
+    margin-left: 48px;
+}
+
+.imgshow_header>span{
+    height: 30px;
+    width: 35px;
+    position: relative;
+    top: 8px;
+    background-color: crimson;
+}
+
+.imgshow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgshow_header{
+    display: flex;
+    width: 60vw;
+}
+.imgshow_header>.out_div{
+    width: 60vw;
+}
+.img_area{
+    margin-top: 5vh;
+    width: 60vw;
+    height: 90vh;
+}
+.image-item{
+    width: 212px;
+    height: 110px;
+}
+
+.footer{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_top{
+    height: 21vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9251e;
+}
+
+.footer_img{
+    width: 200px;
+    height: 80px;
+    border: 0;
+    background-image: url(img/qianku_logo.jpg);
+    background-size: cover;
+    
+}
+
+.footer_li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.footer_top>span{
+    width: 2px;
+    height: 10vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background-color: white;
+}
+
+.footer_li li{
+    
+    width: 35em;
+    line-height: 28px;
+    font-size: 12px;
+    text-align: justify;
+    color: white;
+
+}
+
+.footer_bottom{
+    height: 9vh;
+    width: 100%;
+    font-size: 10px;
+    line-height: 20px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #8d8c8c;
+}
+
+.toTop{
+    height: 50px;
+    width: 50px;
+    position:fixed;
+    top: 90%;
+    left: 95%;
+    background-image: url(img/up.png);
+    background-size: cover;
+    display: none;
+}
+

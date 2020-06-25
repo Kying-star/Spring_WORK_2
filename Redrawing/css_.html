@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #container div{  /* 空格 后代选择器：选中下面的所有的div*/
+              height: 25px;
+              width: 25px;
+              color: red;
+              background-image: url("ico1.gif");
+ 
+          }
+        #div2{
+            background-position: -42px 0;/*图片往左移动42个px*/
+        }
+        #div3{
+            background-position: -165px -28px;/*图片往左移动165个px   图片向上移动28个px*/
+ 
+        }
+    </style>
+    <title>雪碧图</title>
+</head>
+<body>
+ 
+<div id="container">
+    <div></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</div>
+ 
+</body>
+</html>
